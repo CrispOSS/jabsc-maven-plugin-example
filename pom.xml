@@ -7,15 +7,15 @@
 	<groupId>com.github.crisposs</groupId>
 	<artifactId>jabsc-maven-plugin-example</artifactId>
 	<version>1.0.0</version>
-   <name>Example to use jabsc-maven-plugin</name>
+	<name>Example to use jabsc-maven-plugin</name>
 	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <version.junit>4.12</version.junit>
+		<version.junit>4.12</version.junit>
 		<version.abs-api>0.8.4</version.abs-api>
-      <version.jabsc>0.1.4</version.jabsc>
-      <version.jabsc-maven-plugin>0.1.0</version.jabsc-maven-plugin>
+		<version.jabsc>0.1.4</version.jabsc>
+		<version.jabsc-maven-plugin>0.1.0</version.jabsc-maven-plugin>
 	</properties>
 
 	<build>
@@ -51,11 +51,11 @@
 			<artifactId>abs-api</artifactId>
 			<version>${version.abs-api}</version>
 		</dependency>
-      <dependency>
-         <groupId>${project.groupId}</groupId>
-         <artifactId>jabsc</artifactId>
-         <version>${version.jabsc}</version>
-      </dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>jabsc</artifactId>
+			<version>${version.jabsc}</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
