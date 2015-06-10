@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.github.crisposs</groupId>
+	<artifactId>jabsc-maven-plugin-example</artifactId>
+	<version>1.0.0</version>
+   <name>Example to use jabsc-maven-plugin</name>
+	<packaging>jar</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <version.junit>4.12</version.junit>
+		<version.abs-api>0.8.4</version.abs-api>
+      <version.jabsc>0.1.4</version.jabsc>
+      <version.jabsc-maven-plugin>0.1.0</version.jabsc-maven-plugin>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.crisposs</groupId>
+				<artifactId>jabsc-maven-plugin</artifactId>
+				<version>${version.jabsc-maven-plugin}</version>
+				<executions>
+					<execution>
+						<id>abs-compile</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>jabsc</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>abs-api</artifactId>
+			<version>${version.abs-api}</version>
+		</dependency>
+      <dependency>
+         <groupId>${project.groupId}</groupId>
+         <artifactId>jabsc</artifactId>
+         <version>${version.jabsc}</version>
+      </dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${version.junit}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+</project>
+
